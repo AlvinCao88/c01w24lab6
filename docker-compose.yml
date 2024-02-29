@@ -1,11 +1,17 @@
 services:
   frontend:
-    image: AlvinCao88/quirknotes_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile_frontend
+      target: frontend
     ports:
       - "3000:80"
 
   backend:
-    image: AlvinCao88/quirknotes_backend
+    build:
+      context: .
+      dockerfile: Dockerfile_backend
+      target: backend
     ports:
       - "4000:4000"
     environment:
