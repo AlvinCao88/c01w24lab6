@@ -1,5 +1,5 @@
 services:
- frontend:
+  frontend:
     image: AlvinCao88/quirknotes_frontend
     ports:
       - "3000:80"
@@ -12,10 +12,8 @@ services:
       - ENV=Docker
     depends_on:
       - mongodb
-      
+
   mongodb:
     image: mongo:latest
     ports:
       - "27017:27017"
-
- 
