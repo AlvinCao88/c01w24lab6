@@ -1,17 +1,6 @@
 services:
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile_frontend
-      target: frontend
-    ports:
-      - "3000:80"
-
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile_backend
-      target: backend
+    image: alvincao88/quirknotes_backend:latest
     ports:
       - "4000:4000"
     environment:
@@ -23,3 +12,8 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+
+  frontend:
+    image: alvincao88/quirknotes_frontend:latest
+    ports:
+      - "3000:80"
