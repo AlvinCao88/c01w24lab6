@@ -1,10 +1,6 @@
 services:
   backend:
     image: AlvinCao88/quirknotes_backend:latest
-    build:
-      context: .
-      dockerfile: Dockerfile_backend
-      target: backend
     ports:
       - "4000:4000"
     environment:
