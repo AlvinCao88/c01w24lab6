@@ -3,6 +3,7 @@ services:
     image: AlvinCao88/quirknotes_frontend
     ports:
       - "3000:80"
+
   backend:
     image: AlvinCao88/quirknotes_backend
     ports:
@@ -11,6 +12,7 @@ services:
       - ENV=Docker
     depends_on:
       - mongodb
+      
   mongodb:
     image: mongo:latest
     ports:
